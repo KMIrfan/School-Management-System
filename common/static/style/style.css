@@ -31,7 +31,7 @@ body {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 20px;
     margin-left: 50px;
   }
   .openbtn {
@@ -91,6 +91,11 @@ body {
     padding-left: 280px;
     padding-top: 0;
   }
+  .p7{
+    padding: 70px;
+    padding-left: 180px;
+    padding-top: 0;
+  }
 }
 .colordiv{
     width: 250px;
@@ -113,4 +118,50 @@ body {
     background-color: 
     #2c3b41;
 }
+.imgclas{
+  opacity: 0.2;
+  float: right;
+  top: -10px;
+  position: relative;
+}
+.fontin{
+  font-size: 20px;
+  color: #ffff;
+  padding-left: 20px;
+  display: block;
+  top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.fontinhead{
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffff;
+  padding-left: 20px;
+  top: 60px;
+  position: relative;
+}
+.loginbtn{
+  border-radius: 100%;
+  background-color: #212c30;
+}
+.mainhead{
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+  color:#2c3b41;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+.logintxt{
+  color: #212c30;
+  font-weight: 500;
+  float: right;
+  position: relative;
+  left: 400px;
+}
+
 
