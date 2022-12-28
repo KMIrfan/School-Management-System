@@ -190,6 +190,9 @@ body {
   .btn-big{
     width: 200px;
   }
+  .btn-big:hover{
+    background-color:#4d6169 ;
+  }
   .bg-sec{
     background-color: #eaf3f7;
   }
@@ -201,4 +204,10 @@ body {
   color: rgb(112, 110, 110);
   font-size: 14px;
  }
+
+ /* Leave Application */
+ .intro {
+  height: 100%;
+}
+
 
