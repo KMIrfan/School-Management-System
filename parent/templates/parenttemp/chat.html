@@ -21,7 +21,7 @@
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><img src="{% static 'images/school.png' %}" height="70px" width="120px">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
               <a
-                href="{% url 'student:index' %}" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
+                href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><span class="linkactive">Dashboard</span>
               </a>
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark">
@@ -37,13 +37,14 @@
                 <i class="fas fa-chart-pie fa-fw me-3"></i><span class="fontcol">Exam Details</span>
               </a>
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-chart-bar fa-fw me-3"></i><span class="fontcol">Leave Application</span></a
+                ><i class="fas fa-chart-bar fa-fw me-3"></i><span class="fontcol">Notification</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Notification</span></a
-              >
+              
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
                 ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Calendar</span></a
+              >
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
+                ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Chat</span></a
               >
              
             </div>
@@ -80,7 +81,7 @@
               <div class="col-12 col-lg-9 col-xl-7">
                 <div class="card">
                   <div class="card-body p-4 p-md-5">
-                    <h3 class="mb-4 pb-2">Leave Application</h3>
+                    <h3 class="mb-4 pb-2">Chat</h3>
       
                     <form action="">
       
@@ -99,28 +100,8 @@
                       <div class="row">
                         
                         <div class="form-outline">
-                            <textarea cols="70px" rows="5" class="border-0 rounded-3 bg-sec" placeholder="Reason"></textarea>
+                            <textarea cols="70px" rows="5" class="border-0 rounded-3 bg-sec" placeholder="Type Here"></textarea>
                             
-                          </div>
-                      </div>
-      
-                      <div class="row pt-3">
-                        
-                        <div class="col-md-6 mb-4">
-      
-                          <div class="form-outline">
-                            <input type="tel" id="phoneNumber" class="form-control border-0 rounded-3 bg-sec" placeholder="Parents Phone Number" />
-                            
-                          </div>
-      
-                        </div>
-                        <div class="col-md-6 mb-4">
-      
-                            <div class="form-outline datepicker">
-                              <input type="date" class="form-control border-0 rounded-3 bg-sec" id="birthdayDate" placeholder="Select date"  />
-                              
-                            </div>
-        
                           </div>
                       </div>
       
@@ -129,10 +110,8 @@
                           <div class="mt-4">
                             <input class="btn bg-lightdark btn-md text-light rounded-5 btn-big" type="submit" value="Submit" />
                           </div>
-      
                         </div>
                       </div>
-      
                     </form>
                   </div>
                 </div>
@@ -141,9 +120,6 @@
           </div>
         </div>
       </section>
-  
-    
-    
     
 
     <script>
@@ -153,7 +129,7 @@
   
   /* Set the width of the sidebar to 0 (hide it) */
   function closeNav() {
-    document.getElementById("sidebarMenu").style.width = "0";
+    document.getElementById("sidebarMenu").style.width = "0px";
   }
   </script>
 

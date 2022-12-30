@@ -209,5 +209,12 @@ body {
  .intro {
   height: 100%;
 }
+.select-md{
+  height: 40px;
+  width: 250px;
+}
+select{
+  border-color: #e2e5e6;
+}
 
 

@@ -21,31 +21,51 @@
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><img src="{% static 'images/school.png' %}" height="70px" width="120px">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
               <a
-                href="{% url 'student:index' %}" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
+                href="{% url 'teacher:index' %}" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><span class="linkactive">Dashboard</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark">
-                <i class="fas fa-chart-area fa-fw me-3"></i><span class="fontcol">Attendance</span>
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                <i class="fas fa-chart-area fa-fw "></i><span class="fontcol">Add</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-lock fa-fw me-3"></i><span class="fontcol">Marks</span></a
+
+              <div class="list-group list-group-flush mx-3">
+                <a href="{% url 'teacher:addmarks' %}" class="list-group-item bg-lightdark">Marks</a>
+                <a href="{% url 'teacher:addtimetable' %}" class="list-group-item bg-lightdark">Time Table</a>
+                <a href="{% url 'teacher:addexamtimetable' %}" class="list-group-item bg-lightdark">Exam Time Table</a>
+              </div>
+              
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                ><i class="fas fa-lock fa-fw"></i><span class="fontcol">View</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-chart-line fa-fw me-3"></i><span class="fontcol">Time Table</span></a
+              <div class="list-group list-group-flush mx-3">
+                <a href="#" class="list-group-item bg-lightdark">Marks</a>
+                <a href="#" class="list-group-item bg-lightdark">Attendance</a>
+                <a href="#" class="list-group-item bg-lightdark">Students</a>
+                <a href="#" class="list-group-item bg-lightdark">Subjects</a>
+              </div>
+            
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                ><i class="fas fa-chart-line fa-fw"></i><span class="fontcol">Attendance</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark">
-                <i class="fas fa-chart-pie fa-fw me-3"></i><span class="fontcol">Exam Details</span>
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                <i class="fas fa-chart-pie fa-fw"></i><span class="fontcol">Send Notification</span>
               </a>
+              <div class="list-group list-group-flush mx-3">
+                <a href="#" class="list-group-item bg-lightdark">Students</a>
+                <a href="#" class="list-group-item bg-lightdark">Parents</a>
+                
+              </div>
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-chart-bar fa-fw me-3"></i><span class="fontcol">Leave Application</span></a
+                ><i class="fas fa-chart-bar fa-fw"></i><span class="fontcol">Notification</span></a
               >
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Notification</span></a
+                ><i class="fas fa-globe fa-fw"></i><span class="fontcol">Leave Application</span></a
               >
+              
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Calendar</span></a
+                ><i class="fas fa-calendar fa-fw"></i><span class="fontcol">Calendar</span></a
               >
-             
+              
             </div>
           </div>
         </nav>
@@ -80,60 +100,49 @@
               <div class="col-12 col-lg-9 col-xl-7">
                 <div class="card">
                   <div class="card-body p-4 p-md-5">
-                    <h3 class="mb-4 pb-2">Leave Application</h3>
+                    <h3 class="mb-4 pb-2">Add Marks</h3>
       
-                    <form action="">
-      
-                      <div class="row">
-                        <div class="col-md-12 mb-4">
-      
-                          <div class="form-outline">
-                            <input type="text" id="firstName" class="form-control border-0 rounded-3 bg-sec" placeholder="Name" />
-                            
-                          </div>
-      
-                        </div>
-                        
-                      </div>
-      
-                      <div class="row">
-                        
-                        <div class="form-outline">
-                            <textarea cols="70px" rows="5" class="border-0 rounded-3 bg-sec" placeholder="Reason"></textarea>
-                            
-                          </div>
-                      </div>
-      
-                      <div class="row pt-3">
-                        
-                        <div class="col-md-6 mb-4">
-      
-                          <div class="form-outline">
-                            <input type="tel" id="phoneNumber" class="form-control border-0 rounded-3 bg-sec" placeholder="Parents Phone Number" />
-                            
-                          </div>
-      
-                        </div>
-                        <div class="col-md-6 mb-4">
-      
-                            <div class="form-outline datepicker">
-                              <input type="date" class="form-control border-0 rounded-3 bg-sec" id="birthdayDate" placeholder="Select date"  />
-                              
-                            </div>
-        
-                          </div>
-                      </div>
-      
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="mt-4">
-                            <input class="btn bg-lightdark btn-md text-light rounded-5 btn-big" type="submit" value="Submit" />
-                          </div>
-      
-                        </div>
-                      </div>
-      
-                    </form>
+                    
+            <form class="px-md-2">
+              <div class="row">
+                
+                <div class="col-md-6 mb-4 ">
+              <select class="select select-md bg-sec rounded-4">
+                <option value="1" disabled selected>Select Department</option>
+                <option value="2">CS</option>
+                <option value="3">BBA</option>
+                <option value="4">BCom</option>
+              </select></div>
+              <div class="col-md-6 mb-4">
+              <select class="select select-md bg-sec rounded-4">
+                <option value="1" disabled selected>Select Year</option>
+                <option value="2">I</option>
+                <option value="3">II</option>
+                <option value="4">III</option>
+              </select>
+              
+              </div>
+
+              <div class="row">
+                
+                <div class="col-md-6 mb-4">
+
+                  <select class="select bg-sec rounded-4 select-md">
+                    <option value="1" disabled selected>Select Subect</option>
+                    <option value="2">Python</option>
+                    <option value="3">Flutter</option>
+                    <option value="4">Android</option>
+                  </select>
+
+                </div>
+              </div>
+
+
+             
+
+              <button type="submit" class="btn bg-lightdark mb-1 text-light btn-big">Submit</button>
+              
+            </form>
                   </div>
                 </div>
               </div>

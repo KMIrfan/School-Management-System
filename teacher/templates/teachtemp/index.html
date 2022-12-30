@@ -21,39 +21,51 @@
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><img src="{% static 'images/school.png' %}" height="70px" width="120px">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
               <a
-                href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
+                href="{% url 'teacher:index' %}" class="list-group-item list-group-item-action py-2 ripple bg-lightdark" aria-current="true">
                 <i class="fas fa-tachometer-alt fa-fw me-3"></i><span class="linkactive">Dashboard</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark">
-                <i class="fas fa-chart-area fa-fw me-3"></i><span class="fontcol">Attendance</span>
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                <i class="fas fa-chart-area fa-fw "></i><span class="fontcol">Add</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-lock fa-fw me-3"></i><span class="fontcol">Marks</span></a
+
+              <div class="list-group list-group-flush mx-3">
+                <a href="{% url 'teacher:addmarks' %}" class="list-group-item bg-lightdark">Marks</a>
+                <a href="{% url 'teacher:addtimetable' %}" class="list-group-item bg-lightdark">Time Table</a>
+                <a href="{% url 'teacher:addexamtimetable' %}" class="list-group-item bg-lightdark">Exam Time Table</a>
+              </div>
+              
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                ><i class="fas fa-lock fa-fw"></i><span class="fontcol">View</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-chart-line fa-fw me-3"></i><span class="fontcol">Time Table</span></a
+              <div class="list-group list-group-flush mx-3">
+                <a href="#" class="list-group-item bg-lightdark">Marks</a>
+                <a href="#" class="list-group-item bg-lightdark">Attendance</a>
+                <a href="#" class="list-group-item bg-lightdark">Students</a>
+                <a href="#" class="list-group-item bg-lightdark">Subjects</a>
+              </div>
+            
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                ><i class="fas fa-chart-line fa-fw"></i><span class="fontcol">Attendance</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark">
-                <i class="fas fa-chart-pie fa-fw me-3"></i><span class="fontcol">Exam Details</span>
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple disabled" style="background-color: #232e33;">
+                <i class="fas fa-chart-pie fa-fw"></i><span class="fontcol">Send Notification</span>
               </a>
+              <div class="list-group list-group-flush mx-3">
+                <a href="#" class="list-group-item bg-lightdark">Students</a>
+                <a href="#" class="list-group-item bg-lightdark">Parents</a>
+                
+              </div>
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-chart-bar fa-fw me-3"></i><span class="fontcol">Notification</span></a
+                ><i class="fas fa-chart-bar fa-fw"></i><span class="fontcol">Notification</span></a
               >
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-globe fa-fw me-3"></i><span class="fontcol">Leave Application</span></a
+                ><i class="fas fa-globe fa-fw"></i><span class="fontcol">Leave Application</span></a
               >
+              
               <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-building fa-fw me-3"></i><span class="fontcol">Partners</span></a
+                ><i class="fas fa-calendar fa-fw"></i><span class="fontcol">Calendar</span></a
               >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-calendar fa-fw me-3"></i><span class="fontcol">Calendar</span></a
-              >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-users fa-fw me-3"></i><span class="fontcol">Users</span></a
-              >
-              <a href="#" class="list-group-item list-group-item-action py-2 ripple bg-lightdark"
-                ><i class="fas fa-money-bill fa-fw me-3"></i><span class="fontcol">Sales</span></a
-              >
+              
             </div>
           </div>
         </nav>
@@ -86,48 +98,30 @@
                 <div class="col-12 col-md-6 col-lg-4 pb-4">
 
                     <div class="colordiv colblue rounded-2">
-                      <span class="fontinhead">1000</span>
+                      <span class="fontinhead">180</span>
                       <span class="fontin">Students</span>
                       <img src="{% static 'images/students.png' %}" width="120px" height="110px" class="imgclas">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 pb-4">
                     <div class="colordiv colbrown rounded-2">
-                      <span class="fontinhead">30 +</span>
+                      <span class="fontinhead">5 +</span>
                       <span class="fontin"> Subjects</span>
                       <img src="{% static 'images/parents.png' %}" width="120px" height="100px" class="imgclas">
                     </div>  
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 pb-4">
-                    <div class="colordiv colgreen rounded-2">
-                      <span class="fontinhead">08</span>
-                      <span class="fontin"> Departments</span>
-                      <img src="{% static 'images/departments.png' %}" width="120px" height="110px" class="imgclas">
-                    </div>
-                </div>
+               
                 
             
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="colordiv colbrown rounded-2">
-                      <span class="fontinhead">40</span>
-                      <span class="fontin">Teachers</span>
-                     <img src="{% static 'images/teacher.png' %}" width="180px" height="140px" class="imgclas">
-                    </div>
-                </div>
+                
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="colordiv colgreen rounded-2">
-                      <span class="fontinhead">700</span>
+                      <span class="fontinhead">90</span>
                       <span class="fontin">Parents</span>
                       <img src="{% static 'images/parents.png' %}" width="120px" height="100px" class="imgclas">
                     </div>  
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="colordiv colgreen rounded-2">
-                    <span class="fontinhead">15</span>
-                    <span class="fontin"> Non-Teaching</span>
-                    <img src="{% static 'images/parents.png' %}" width="120px" height="100px" class="imgclas">
-                  </div>  
+                
               </div>
                 
             </div>
